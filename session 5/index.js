@@ -22,28 +22,10 @@
 // };
 // document.querySelector(".btn-calculer").addEventListener("click", calculerF);
 
+let userNumber = Number(document.querySelector(".userNumber"));
+let result;
 
-
-
-let storage = 20;
-let minResult = 5;
-let maxResult = 18;
-let answer = (e) => {
-    let userNumber = Number(document.querySelector(".userNumber").value);
-    e.preventDefault();
-    storage -= 1;
-    if (storage > 0) {
-        if (userNumber <= maxResult && userNumber >= minResult) {
-            document.querySelector(".result").textContent = "You Win!";
-        } else {
-            document.querySelector(".result").textContent = "Try something else";
-        }
-    } else {
-        document.querySelector(".result").textContent = "Your points out of stock!";
-        document.querySelector(".submit").textContent = "Play again";
-        document.querySelector(".submit").addEventListener("click", () => {window.location.reload();});
-    }
-};
-document.querySelector(".submit").addEventListener("click", answer);
-
+function answer() {
+    userNumber.addEventListener
+}
 
