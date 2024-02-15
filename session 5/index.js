@@ -26,8 +26,12 @@
 
 
 let storage = 20;
-let minResult = 5;
-let maxResult = 18;
+let minResult = 530;
+let maxResult = 560;
+let wins = 0;
+let loses = 0;
+let winStreaks = 0;
+let loseStreaks = 0;
 document.querySelector(".points").textContent = "Avaiable points :" + storage;
 let answer = (e) => {
     let userNumber = Number(document.querySelector(".userNumber").value);
@@ -46,6 +50,12 @@ let answer = (e) => {
             document.querySelector(".result").textContent = "You Win!";
             document.querySelector(".result").style.color = "green";
             document.querySelector(".submit").textContent = "Play again";
+            wins += 1;
+            document.querySelector(".wins").textContent = "Wins :" + wins;
+            winStreaks += 1;
+            document.querySelector(".win-streaks").textContent = "Win Streaks :" + winStreaks;
+            loseStreaks = 0;
+            document.querySelector(".lose-streaks").textContent = "Lose Streaks :" + loseStreaks;
             storage = 21;
         } else {
             document.querySelector(".result").textContent = "Try something else";
@@ -56,6 +66,13 @@ let answer = (e) => {
         document.querySelector(".points").textContent = "Avaiable points :" + storage;
         document.querySelector(".result").textContent = "Your points out of stock!";
         document.querySelector(".submit").textContent = "Play again";
+        loses += 1;
+        document.querySelector(".loses").textContent = "Loses :" + loses;
+        loseStreaks += 1;
+        document.querySelector(".lose-streaks").textContent = "Lose Streaks :" + loseStreaks;
+        winStreaks = 0;
+        document.querySelector(".win-streaks").textContent = "Win Streaks :" + winStreaks;
+        winStreaks = 0;
         storage = 21;
         document.querySelector(".submit").addEventListener("click", answer);
     }

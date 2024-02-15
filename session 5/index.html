@@ -11,8 +11,53 @@
             align-items: center;
             flex-direction: column;
             width: 100%;
-            height: 250px;
+            height: 560px;
             margin-top: 50px;
+        }
+        form h1 {
+            font-size: 45px;
+            margin: 0px;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .result {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .points {
+            color: blue;
+            font-size: 25px;
+        }
+        .wins {
+            color: rgb(0, 182, 0);
+            font-size: 25px;
+        }
+        .win-streaks {
+            color: rgb(0, 133, 0);
+            font-size: 25px;
+        }
+        .loses {
+            color: red;
+            font-size: 25px;
+        }
+        .lose-streaks {
+            color: brown;
+            font-size: 25px;
+        }
+        .submit {
+            color: white;
+            font-size: 18px;
+            padding: 10px 28px 10px 28px;
+            cursor: pointer;
+            border-radius: 10px;
+            border-style: none;
+            background-color: cadetblue;
+        }
+        .submit:hover {
+            background-color: rgb(64, 121, 122);
         }
     </style>
 </head>
@@ -34,10 +79,16 @@
 
     <form>
         <h1>Play a Game</h1>
-        <label class="result">Enter a number</label>
-        <input class="userNumber" type="number"/>
+        <div>
+            <label class="result">Enter a number</label>
+            <input class="userNumber" type="number"/>
+        </div>
         <button class="submit" type="submit">Submit</button>
         <label class="points"></label>
+        <label class="wins">Wins : 0</label>
+        <label class="win-streaks">Win Streaks : 0</label>
+        <label class="loses">Loses : 0</label>
+        <label class="lose-streaks">Lose Streaks : 0</label>
     </form>
 
     <script src="index.js"></script>
