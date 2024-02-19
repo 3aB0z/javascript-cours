@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0px;
+            width: 100%;
+            height: 100vh;
+        }
+        form {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            background-color: crimson;
+            width: 350px;
+            height: 350px;
+            border-radius: 10px;
+        }
+        form > div {
+            display: flex;
+            justify-content: end;
+            flex-direction: row;
+            width: 73%;
+        }
+        form div:last-of-type {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            width: 90%;
+        }
+        form div:last-of-type button {
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100px;
+            height: 30px;
+            background-color: white;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        label {
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        input {
+            height: 20px;
+            margin-left: 8px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <div>
+            <label>Name :</label>
+            <input type="text" class="name">
+        </div>
+        <div>
+            <label>Prenom :</label>
+            <input type="text" class="prenom">
+        </div>
+        <div>
+            <label>Age :</label>
+            <input type="number" class="age" min="0">
+        </div>
+        <div>
+            <button type="button" class="afficher">Afficher</button>
+            <button type="submit" class="submit">Ajouter</button>
+        </div>
+    </form>
+
+    <script src="formulaire.js"></script>
+</body>
+</html>
