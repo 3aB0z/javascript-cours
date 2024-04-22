@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de TV</title>
+</head>
+<body>
+    
+    <form>
+        <h1>Commander les TVs</h1>
+        <div>
+            <h4>TVs</h4>
+            <select id="select">
+                <option value=""></option>
+                <option value="SAMSUNG">SAMSUNG</option>
+                <option value="APPLE">APPLE</option>
+            </select>
+        </div>
+        <div>
+            <h4>Quantite</h4>
+            <input type="number" id="quantite">
+        </div>
+        <button type="submit" id="add-btn">Ajouter</button>
+    </form>
+    <h1>Panier de commandes</h1>
+    <table>
+        <tbody>
+            <tr>
+                <td>REFERENCE</td>
+                <td>QUANTITE</td>
+                <td>IMAGE</td>
+                <td>ACTION</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <h5>Total HT</h5>
+        <p><span id="HT-span">0</span> DHS</p>
+    </div>
+    <div>
+        <h5>Total TTC</h5>
+        <p><span id="TTC-span">0</span> DHS</p>
+    </div>
+    <button id="command-btn">Commander</button>
+
+    <script src="gestionDeTV.js"></script>
+</body>
+</html>

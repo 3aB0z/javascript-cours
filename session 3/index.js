@@ -23,7 +23,7 @@ switch (new Date().getDay()) {
 
 console.log(day);
 
-
+let hjghg=[ item , prix , contiter ]
 
 let abreviation = "ID";
 let filliere;

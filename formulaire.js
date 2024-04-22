@@ -2,29 +2,29 @@ let stagiaires = [];
 
 let ajouterDansUnList = (e) => {
     e.preventDefault();
-    let person;
-    let name;
-    let prenom;
-    let age;
-    name = document.querySelector(".name").value;
-    prenom = document.querySelector(".prenom").value;
-    age = document.querySelector(".age").value;
-    person = {name,prenom,age};
+    let person = {};
+    let cnie;
+    let nom;
+    cnie = document.querySelector(".cnie").value;
+    nom = document.querySelector(".nom").value;
+    person = {cnie,nom};
     stagiaires.push(person);
 };
 
 document.querySelector(".submit").addEventListener("click", ajouterDansUnList);
 
-let afficherList = (e) => {
+let afficherPerson = () => {
+    
+};
+
+document.querySelector(".afficher").addEventListener("click", afficherPerson);
+
+let searchPerson = (e) => {
     e.preventDefault();
-    stagiaires.map(function (item) {
-        let aLabel = document.createElement("label");
-        aLabel.style.color = "black";
-        aLabel.style.width = "200px";
-        aLabel.style.height = "200px";
-        aLabel.innerHTML = item.name + item.prenom + item.age;
-        document.body.append(aLabel);
+    let pValue = document.querySelector(".search-bar").value;
+    stagiaires.filter((pValue) => {
+        return 
     })
 };
 
-document.querySelector(".afficher").addEventListener("click", afficherList);
+document.querySelector(".search-btn").addEventListener("click", searchPerson);
